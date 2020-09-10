@@ -5,6 +5,7 @@ Testing of template based pipeline runner. Compared with a version based on dyna
 ## Requirements
 * C++11
 * CMake 3.12+
+* g++-9 (Ubuntu 9.3.0-11ubuntu0~18.04.1) 9.3.0
 
 ## Better tests with CPU scaling disabled
 https://github.com/google/benchmark#disabling-cpu-frequency-scaling
