@@ -12,3 +12,6 @@ https://github.com/google/benchmark#disabling-cpu-frequency-scaling
 sudo cpupower frequency-set --governor performance
 sudo cpupower frequency-set --governor powersave
 ```
+
+## Results
+See [benchmark results](./tests/results.csv).
