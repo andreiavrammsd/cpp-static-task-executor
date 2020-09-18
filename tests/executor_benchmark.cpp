@@ -10,7 +10,7 @@
 /**
     Results on release build with CPU scaling disabled
 
-    2020-09-10 20:43:36
+    2020-09-18 17:41:43
     Running executor_benchmark
     Run on (8 X 4000 MHz CPU s)
     CPU Caches:
@@ -18,12 +18,12 @@
       L1 Instruction 32K (x4)
       L2 Unified 256K (x4)
       L3 Unified 8192K (x1)
-    Load Average: 0.64, 0.69, 0.72
+    Load Average: 0.66, 1.26, 1.31
  */
 
 constexpr int kThreads = 1;
 constexpr benchmark::IterationCount kIterations = 2000000;
-constexpr int kRepetitions = 10;
+constexpr int kRepetitions = 100;
 constexpr bool kReportAggregatesOnly = true;
 constexpr std::int64_t kBytesProcessed = 1;
 
