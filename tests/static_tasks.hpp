@@ -1,5 +1,5 @@
-#ifndef PIPELINE_STATIC_TASKS_HPP_
-#define PIPELINE_STATIC_TASKS_HPP_
+#ifndef EXECUTOR_STATIC_TASKS_HPP_
+#define EXECUTOR_STATIC_TASKS_HPP_
 
 #include <algorithm>
 #include <iostream>
@@ -22,7 +22,7 @@ class A {
    public:
     explicit A(Data &d) : d_{d} {}
 
-    void Run() const
+    void Execute() const
     {
         d_.x += rndm(e);
 
@@ -38,7 +38,7 @@ class B {
    public:
     explicit B(Data &d) : d_{d} {}
 
-    void Run() const
+    void Execute() const
     {
         d_.x -= rndm(e);
 
@@ -53,7 +53,7 @@ class C {
    public:
     explicit C(Data &d) : d_{d} {}
 
-    void Run() const
+    void Execute() const
     {
         if (d_.x % 2 == 0) {
             d_.x += rndm(e);
@@ -66,4 +66,4 @@ class C {
 
 }  // namespace static_tasks
 
-#endif  // PIPELINE_STATIC_TASKS_HPP_
+#endif  // EXECUTOR_STATIC_TASKS_HPP_

@@ -1,6 +1,6 @@
-# Static pipeline
+# Static task executor
 
-Testing of template based pipeline runner. Compared with a version based on dynamic polymorphism.
+Testing of template based task executor. Compared with a version based on dynamic polymorphism.
 
 ## Requirements
 * C++11

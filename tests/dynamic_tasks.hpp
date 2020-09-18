@@ -1,12 +1,12 @@
-#ifndef PIPELINE_DYNAMIC_TASKS_HPP_
-#define PIPELINE_DYNAMIC_TASKS_HPP_
+#ifndef EXECUTOR_DYNAMIC_TASKS_HPP_
+#define EXECUTOR_DYNAMIC_TASKS_HPP_
 
 #include <algorithm>
 #include <iostream>
 #include <random>
 #include <vector>
 
-#include "dynamic_pipeline.hpp"
+#include "dynamic_executor.hpp"
 
 namespace dynamic_tasks {
 
@@ -20,11 +20,11 @@ struct Data {
     int x;
 };
 
-class A : public dynamic_pipeline::Task {
+class A : public dynamic_executor::Task {
    public:
     explicit A(Data &d) : d_{d} {}
 
-    void Run() override
+    void Execute() override
     {
         d_.x += rndm(e);
 
@@ -36,11 +36,11 @@ class A : public dynamic_pipeline::Task {
     Data &d_;
 };
 
-class B : public dynamic_pipeline::Task {
+class B : public dynamic_executor::Task {
    public:
     explicit B(Data &d) : d_{d} {}
 
-    void Run() override
+    void Execute() override
     {
         d_.x -= rndm(e);
 
@@ -51,11 +51,11 @@ class B : public dynamic_pipeline::Task {
     Data &d_;
 };
 
-class C : public dynamic_pipeline::Task {
+class C : public dynamic_executor::Task {
    public:
     explicit C(Data &d) : d_{d} {}
 
-    void Run() override
+    void Execute() override
     {
         if (d_.x % 2 == 0) {
             d_.x += rndm(e);
@@ -68,4 +68,4 @@ class C : public dynamic_pipeline::Task {
 
 }  // namespace dynamic_tasks
 
-#endif  // PIPELINE_DYNAMIC_TASKS_HPP_
+#endif  // EXECUTOR_DYNAMIC_TASKS_HPP_

@@ -13,5 +13,5 @@ if (NOT benchmark_POPULATED)
     add_subdirectory(${benchmark_SOURCE_DIR} ${benchmark_BINARY_DIR})
 endif ()
 
-add_executable(pipeline_benchmark pipeline_benchmark.cpp)
-target_link_libraries(pipeline_benchmark benchmark)
+add_executable(executor_benchmark executor_benchmark.cpp)
+target_link_libraries(executor_benchmark benchmark)
